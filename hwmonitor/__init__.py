@@ -1,14 +1,22 @@
 #!/usr/bin/env python
+import os
 import public
-import runcmd
+import subprocess
 
-BIN = "/Applications/HardwareMonitor.app/Contents/MacOS/hwmonitor"
+
+PATHS = [
+    os.path.expanduser("~/Applications/HardwareMonitor.app/Contents/MacOS/hwmonitor"),
+    "/Applications/HardwareMonitor.app/Contents/MacOS/hwmonitor",
+]
+for PATH in PATHS:
+    if os.path.exists(PATH):
+        break
 
 
 @public.add
 def read():
     """return string with `hwmonitor` output"""
-    return runcmd.run([BIN])._raise().out
+    return subprocess.check_output([PATH], stderr=subprocess.PIPE).decode("utf-8")
 
 
 @public.add
