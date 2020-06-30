@@ -1,11 +1,13 @@
-#!/usr/bin/env python
+__all__ = ['read', 'sensors', 'sensor']
+
+
 import os
-import public
 import subprocess
 
 
 PATHS = [
-    os.path.expanduser("~/Applications/HardwareMonitor.app/Contents/MacOS/hwmonitor"),
+    os.path.expanduser(
+        "~/Applications/HardwareMonitor.app/Contents/MacOS/hwmonitor"),
     "/Applications/HardwareMonitor.app/Contents/MacOS/hwmonitor",
 ]
 for PATH in PATHS:
@@ -13,13 +15,11 @@ for PATH in PATHS:
         break
 
 
-@public.add
 def read():
     """return string with `hwmonitor` output"""
     return subprocess.check_output([PATH], stderr=subprocess.PIPE).decode("utf-8")
 
 
-@public.add
 def sensors():
     """return dict with sensor names as keys and temperature as values"""
     result = dict()
@@ -30,7 +30,6 @@ def sensors():
     return result
 
 
-@public.add
 def sensor(name):
     """return sensor value by sensor name"""
     for k, v in sensors().items():

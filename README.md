@@ -1,24 +1,16 @@
 <!--
-https://pypi.org/project/readme-generator/
-https://pypi.org/project/python-readme-generator/
+https://readme42.com
 -->
 
-[![](https://img.shields.io/badge/OS-MacOS-blue.svg?longCache=True)]()
-[![](https://img.shields.io/pypi/pyversions/hwmonitor.svg?longCache=True)](https://pypi.org/project/hwmonitor/)
-[![](https://img.shields.io/pypi/v/hwmonitor.svg?maxAge=3600)](https://pypi.org/project/hwmonitor/)
-[![Travis](https://api.travis-ci.org/looking-for-a-job/hwmonitor.py.svg?branch=master)](https://travis-ci.org/looking-for-a-job/hwmonitor.py/)
 
-#### Installation
+[![](https://img.shields.io/pypi/v/hwmonitor.svg?maxAge=3600)](https://pypi.org/project/hwmonitor/)
+[![](https://img.shields.io/badge/License-Unlicense-blue.svg?longCache=True)](https://unlicense.org/)
+[![](https://github.com/andrewp-as-is/hwmonitor.py/workflows/tests42/badge.svg)](https://github.com/andrewp-as-is/hwmonitor.py/actions)
+
+### Installation
 ```bash
 $ [sudo] pip install hwmonitor
 ```
-
-#### Functions
-function|`__doc__`
--|-
-`hwmonitor.read()` |return string with `hwmonitor` output
-`hwmonitor.sensor(name)` |return sensor value by sensor name
-`hwmonitor.sensors()` |return dict with sensor names as keys and temperature as values
 
 #### Examples
 ```python
@@ -38,5 +30,5 @@ SMART Disk XXX (ZZZ): 55 C
 [Hardware Monitor.app](https://www.bresink.com/osx/HardwareMonitor.html)
 
 <p align="center">
-    <a href="https://pypi.org/project/python-readme-generator/">python-readme-generator</a>
+    <a href="https://readme42.com/">readme42.com</a>
 </p>
